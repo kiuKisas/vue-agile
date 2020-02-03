@@ -118,8 +118,7 @@
 				return (this.settings.rtl) ? marginX : -1 * marginX
 			}
 		},
-
-		created () {
+		mounted () {
 			// Read settings from options object
 			if (this.options) {
 				for (let key in this.options) {
@@ -134,9 +133,7 @@
 
 			// Set first load settings
 			Object.assign(this.settings, this.initialSettings)
-		},
 
-		mounted () {
       if (!window) return
 			// Windows resize listener
 			window.addEventListener('resize', this.getWidth)
