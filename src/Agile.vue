@@ -139,6 +139,7 @@
 		mounted () {
 			// Windows resize listener
 			window.addEventListener('resize', this.getWidth)
+			window.addEventListener('fullscreen', this.getWidth)
 
 			// Mouse and touch events
 			if ('ontouchstart' in window) {
@@ -157,6 +158,7 @@
 
 		beforeDestroy () {
 			window.removeEventListener('resize', this.getWidth)
+			window.removeEventListener('fullscreen', this.getWidth)
 
 			this.$refs.track.removeEventListener(('ontouchstart' in window) ? 'touchstart' : 'mousedown', this.handleMouseDown)
 			this.$refs.track.removeEventListener(('ontouchstart' in window) ? 'touchend' : 'mouseup', this.handleMouseUp)
