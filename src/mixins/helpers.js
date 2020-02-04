@@ -27,6 +27,7 @@ const mixin = {
 		 * Set window & container width
 		 */
 		getWidth () {
+      console.log('yop')
 			this.widthWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 			this.widthContainer = this.$refs.list.clientWidth
       console.log(this.widthContainer)
